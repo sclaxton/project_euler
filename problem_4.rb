@@ -6,8 +6,8 @@ def is_int_pal? n
 end
 
 # This function produces an array used to generate the products of  
-# of two n-digit numbers in order from (x - floor(m/2))*(x-ceil(m/2)) 
-# down to (x -floor(k/2))*(x - ceil(k/2)), where x is an n-digit
+# of two n-digit numbers in order from (x - floor(m/2))*(x - ceil(m/2)) 
+# down to (x - floor(k/2))*(x - ceil(k/2)), where x is an n-digit
 # number and m > k. 
 # It is based on a heuristic that came out of a pattern I noticed by
 # manually ordering products of two three digit numbers by magnitude.
