@@ -5,11 +5,14 @@ def is_int_pal? n
   return str == str.reverse 
 end
 
-# This function produces an array used to generate the products 
-# of two three-digit numbers in order from (999 - floor(m/2))*(999
-# -ceil(m/2)) up to (999 -floor(k/2))*(999 - ceil(k/2)). It is based
-# on a heuristic that came out of a pattern I noticed by manually
-# ordering products of two three digit numbers by magnitude
+# This function produces an array used to generate the products of  
+# of two n-digit numbers in order from (x - floor(m/2))*(x-ceil(m/2)) 
+# down to (x -floor(k/2))*(x - ceil(k/2)), where x is an n-digit
+# number and m > k. 
+# It is based on a heuristic that came out of a pattern I noticed by
+# manually ordering products of two three digit numbers by magnitude.
+# However the heuristic can be made rigorous and the validity of the
+# series can easily be proven by mathematical induction. 
 def pairs(m, k)
   pairs = []
   sum = m
@@ -46,7 +49,6 @@ def threebythree_pal
     k += 1
   end   
 end 
-
 
 Benchmark.bm(7) do |x|
   x.report("largest palindrome:")   { threebythree_pal }
